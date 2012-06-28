@@ -1,5 +1,17 @@
 #!/usr/bin/env rake
 
+namespace :dotfiles do
+  desc "Symlink dotfiles to HOME directory"
+  task :symlink do
+    (Dir.glob('.*') - %w(. .. .git .gitignore)).each do |dotfile|
+      old_name = File.absolute_path(dotfile)
+      new_name = File.join(ENV['HOME'], dotfile)
+      File.delete(new_name) if File.exists?(new_name)
+      File.symlink(old_name, new_name)
+    end
+  end
+end
+
 namespace :vim do
   desc "Download third-party vim plugins"
   task :bundle do
