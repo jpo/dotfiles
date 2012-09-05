@@ -16,7 +16,7 @@ syntax on
 
 " Set colorscheme
 set background=dark
-colorscheme desert
+colorscheme distinguished
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
