@@ -18,8 +18,10 @@ namespace :vim do
     git_bundles = [ 
       "http://github.com/ervandew/supertab.git",
       "http://github.com/jpo/vim-railscasts-theme.git",
+      "http://github.com/Lokaltog/vim-distinguished.git",
       "http://github.com/scrooloose/nerdcommenter.git",
       "http://github.com/scrooloose/nerdtree.git",
+      "http://github.com/scrooloose/syntastic.git",
       "http://github.com/tpope/vim-rails.git",
       "http://github.com/vim-ruby/vim-ruby.git",
       "http://github.com/vim-scripts/bufexplorer.zip",
