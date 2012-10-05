@@ -5,7 +5,7 @@ set guioptions-=T
 set lines=50 columns=100
 
 " Set colorscheme
-colorscheme distinguished
+colorscheme railscasts
 
 " Set font
 if has("win32") || has("win64")
