@@ -10,6 +10,7 @@ git:
   - "http://github.com/vim-scripts/bufexplorer.zip"
   - "http://github.com/vim-scripts/L9"
   - "http://github.com/vim-scripts/FuzzyFinder"
+  - "http://github.com/davidoc/taskpaper.vim"
 
 vim:
   - ["SearchComplete", "474", "plugin"]
