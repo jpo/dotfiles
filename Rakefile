@@ -19,7 +19,7 @@ namespace :vim do
     require 'open-uri'
     require 'yaml'
 
-    bundles_dir = File.join(File.dirname(__FILE__), 'vim', 'bundle')
+    bundles_dir = File.join(File.dirname(__FILE__), '.vim', 'bundle')
 
     Dir.mkdir(bundles_dir) unless Dir.exists?(bundles_dir)
     FileUtils.cd(bundles_dir)

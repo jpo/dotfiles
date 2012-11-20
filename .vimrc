@@ -1,23 +1,95 @@
-" The directory that contains your color schemes, plugins, scripts, etc. 
-let s:runtime_path="~/Code/dotfiles/vim"
+" Use Vim settings rather than Vi settings.
+" This must be first because it changes other options as a side effect.
+set nocompatible
 
-" The path to the vim-init file
-let s:vim_init="~/Code/dotfiles/vim-init"
+" Setup pathogen
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
 
-" The path to the gvim-init file
-let s:gvim_init="~/Code/dotfiles/gvim-init"
+" Detect file types
+filetype on
+filetype indent on
+filetype plugin on
 
+" Turn on syntax highlighting
+syntax on
 
-" ===== DO NOT MAKE CHANGES BEYOND THIS POINT =====
+" Set colorscheme
+set background=dark
+colorscheme distinguished
 
-" Set the directories to search to find runtime files. This tells Vim where 
-" to find your color schemes, plugins, scripts, etc.
-exec "set runtimepath=" . s:runtime_path . ",$VIMRUNTIME"
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
 
-" Read the settings from the base configuration file.
-exec "source " . s:vim_init
+" Do not store backup or swap files.
+set nobackup
+set noswapfile
 
-" Read the settings from the GUI configuration file if the GUI is running.
-if has("gui_running")
-  exec "source " . s:gvim_init
-endif
+" Use unix style line endings.
+set fileformat=unix
+
+" Do not wrap long lines
+set nowrap
+
+" Show lines numbers
+set number
+
+" Highlight search results
+set hlsearch
+
+" Show autocomplete menu on command line
+set wildmenu
+
+" Tab Settings
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+
+" Indent Settings
+set autoindent
+set smartindent
+
+" Set List characters
+set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<
+
+" Set Status Line format
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]
+
+" File Type Settings
+autocmd FileType ruby setlocal ts=2 sw=2
+autocmd BufNewFile,BufRead *.m,*.h set ft=objc
+
+" Plugin Settings
+let g:bufExplorerShowRelativePath=1
+let g:NERDShutUp = 1
+let g:NERDTreeHijackNetrw = 0
+
+" Custom key bindings
+let mapleader = ","
+map <Leader>b :BufExplorer<CR>
+map <Leader>e :Ex<CR>
+map <Leader>f :FufFile **/<CR>
+map <Leader>n :NERDTree<CR>
+map <Leader>s <C-Z>
+
+" GUI Settings
+if has('gui_running')
+  " Hide the toolbar
+  set guioptions-=T
+
+  " Set window height and width
+  set lines=50 columns=100
+
+  " Set colorscheme
+  colorscheme railscasts
+
+  " Set font
+  if has("win32") || has("win64")
+      set guifont=Consolas:h11:cANSI
+  elseif has("mac")
+      set guifont=Menlo\ Regular:h13.00
+  else
+      set guifont=Courier_New:h10:cDEFAULT
+  endif
+end
