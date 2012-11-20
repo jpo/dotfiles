@@ -41,8 +41,8 @@ set hlsearch
 set wildmenu
 
 " Tab Settings
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 
@@ -71,4 +71,4 @@ map <Leader>b :BufExplorer<CR>
 map <Leader>e :Ex<CR>
 map <Leader>f :FufFile **/<CR>
 map <Leader>n :NERDTree<CR>
-map <Leader>s :shell<CR>
+map <Leader>s <C-Z>
