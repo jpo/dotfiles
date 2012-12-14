@@ -53,6 +53,9 @@ set smartindent
 " Set List characters
 set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<
 
+" Always show status line
+set laststatus=2
+
 " Set Status Line format
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]
 
