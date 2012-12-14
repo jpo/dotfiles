@@ -1,9 +1,15 @@
 # RBENV
 eval "$(rbenv init -)"
 
-# ENVIRONMENT VARIABLES
+# PATH
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/share/python:$PATH"
+
+# EDITOR
 export EDITOR="mvim -v"
-export PATH="$HOME/.cabal/bin:/usr/local/share/npm/bin:$PATH"
+
+# PROMPT
 export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]$(__git_ps1): '
 
 # ALIASES
