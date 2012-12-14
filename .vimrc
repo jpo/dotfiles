@@ -41,8 +41,8 @@ set hlsearch
 set wildmenu
 
 " Tab Settings
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set smarttab
 
@@ -57,6 +57,7 @@ set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]
 
 " File Type Settings
+autocmd FileType python setlocal ts=4 sw=4
 autocmd FileType ruby setlocal ts=2 sw=2
 autocmd BufNewFile,BufRead *.m,*.h set ft=objc
 
