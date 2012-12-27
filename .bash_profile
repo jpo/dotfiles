@@ -1,5 +1,5 @@
-# RBENV
-eval "$(rbenv init -)"
+# RVM
+source $HOME/.rvm/scripts/rvm
 
 # PATH
 export PATH="/usr/local/bin:$PATH"
