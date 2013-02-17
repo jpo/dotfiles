@@ -11,6 +11,7 @@ git:
   - "http://github.com/vim-scripts/L9"
   - "http://github.com/vim-scripts/FuzzyFinder"
   - "http://github.com/davidoc/taskpaper.vim"
+  - "https://github.com/jnwhiteh/vim-golang"
 
 vim:
   - ["SearchComplete", "474", "plugin"]
