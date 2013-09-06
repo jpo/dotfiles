@@ -1,18 +1,15 @@
-# RVM
-source $HOME/.rvm/scripts/rvm
+# RBENV
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # PATH
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
-export PATH="/usr/local/share/python:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/MacOs/bin:$PATH"
 
-# EDITOR
-export EDITOR="mvim -v"
-
 # PROMPT
-export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]$(__git_ps1): '
+# export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]$(__git_ps1): '
+export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]$ '
 
 # ALIASES
 alias tmux='TERM=screen-256color-bce tmux'
