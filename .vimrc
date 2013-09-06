@@ -68,6 +68,7 @@ autocmd BufNewFile,BufRead *.m,*.h set ft=objc
 let g:bufExplorerShowRelativePath=1
 let g:NERDShutUp = 1
 let g:NERDTreeHijackNetrw = 0
+let g:airline#extensions#tabline#enabled = 1
 
 " Custom key bindings
 let mapleader = ","

@@ -13,6 +13,7 @@ git:
   - "http://github.com/davidoc/taskpaper.vim"
   - "http://github.com/jnwhiteh/vim-golang"
   - "http://github.com/kchmck/vim-coffee-script"
+  - "http://github.com/bling/vim-airline"
 
 vim:
   - ["SearchComplete", "474", "plugin"]
