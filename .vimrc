@@ -5,7 +5,7 @@ set nocompatible
 " Setup pathogen
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
-
+            
 " Detect file types
 filetype on
 filetype indent on
@@ -58,6 +58,12 @@ set laststatus=2
 
 " Set Status Line format
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]
+                
+" Faster scrolling
+set scrolljump=2
+
+" Timeout settings (e.g. faster response after <Shift>-O)
+set timeoutlen=100
 
 " File Type Settings
 autocmd FileType python setlocal ts=4 sw=4
