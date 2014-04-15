@@ -1,3 +1,6 @@
 .DS_Store
+.idea/*
 .vim/bundle/*
 .vim/.netrwhist
+node_modules/*
+npm-debug.log
