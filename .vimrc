@@ -62,9 +62,6 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]
 " Faster scrolling
 set scrolljump=2
 
-" Timeout settings (e.g. faster response after <Shift>-O)
-set timeoutlen=100
-
 " File Type Settings
 autocmd FileType python setlocal ts=4 sw=4
 autocmd FileType ruby setlocal ts=2 sw=2
