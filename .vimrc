@@ -77,7 +77,7 @@ let g:airline#extensions#tabline#enabled = 1
 let mapleader = ","
 map <Leader>b :BufExplorer<CR>
 map <Leader>e :Ex<CR>
-map <Leader>f :FufFile **/<CR>
+map <Leader>f :CtrlP<CR>
 map <Leader>n :NERDTree<CR>
 map <Leader>s <C-Z>
 
