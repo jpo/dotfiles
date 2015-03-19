@@ -1,32 +1,6 @@
 {
   "name": "jpo-dotfiles",
   "version": "1.0.0",
-  "symlinks": [
-    ".vim",
-    ".vimrc",
-    ".bash_profile",
-    ".gemrc",
-    ".tmux.conf"
-  ],
-  "vim": {
-    "bundles": ".vim/bundle",
-    "plugins": [
-      "http://github.com/ervandew/supertab.git",
-      "http://github.com/jpo/vim-railscasts-theme.git",
-      "http://github.com/Lokaltog/vim-distinguished.git",
-      "http://github.com/scrooloose/nerdcommenter.git",
-      "http://github.com/scrooloose/nerdtree.git",
-      "http://github.com/scrooloose/syntastic.git",
-      "http://github.com/tpope/vim-rails.git",
-      "http://github.com/vim-ruby/vim-ruby.git",
-      "http://github.com/vim-scripts/bufexplorer.zip",
-      "http://github.com/vim-scripts/SearchComplete",
-      "http://github.com/jnwhiteh/vim-golang",
-      "http://github.com/kchmck/vim-coffee-script",
-      "http://github.com/bling/vim-airline",
-      "https://github.com/kien/ctrlp.vim"
-    ]
-  },
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-contrib-clean": "~0.5.0",

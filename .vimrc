@@ -1,77 +1,74 @@
-" Use Vim settings rather than Vi settings.
-" This must be first because it changes other options as a side effect.
-set nocompatible
+autocmd!
+set nocompatible  " Use Vim settings rather than Vi.
 
 " Setup pathogen
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
-            
-" Detect file types
-filetype on
-filetype indent on
-filetype plugin on
 
-" Turn on syntax highlighting
-syntax on
+filetype on         " Detect file types
+filetype indent on  " Load file-specific indent files
+filetype plugin on  " Load file-specific plugin files
+
+syntax on           " Enable syntax highlighting
 
 " Set colorscheme
 set background=dark
 colorscheme distinguished
 
-" Allow backspacing over everything in insert mode.
-set backspace=indent,eol,start
+set nobackup      " No backup files
+set noswapfile    " No swap files
+set nowrap        " No line wrapping
 
-" Do not store backup or swap files.
-set nobackup
-set noswapfile
+set number        " Show lines numbers
 
-" Use unix style line endings.
-set fileformat=unix
+set hlsearch      " Highlight search results
+set wildmenu      " Show autocomplete menu on command line
 
-" Do not wrap long lines
-set nowrap
+set autoindent    " Indent on enter
+set smartindent   " Indent on new line
 
-" Show lines numbers
-set number
+set expandtab     " Expand tabs to spaces
+set tabstop=2     " Use 2 spaces for tabs
+set shiftwidth=2  " Use 2 spaces for tabs
 
-" Highlight search results
-set hlsearch
+set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
+set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<  " Chars to display in list mode
 
-" Show autocomplete menu on command line
-set wildmenu
+set laststatus=2  " Always show status line
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]  " Status line format
 
-" Tab Settings
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set smarttab
+set fileformat=unix  " Use unix style line endings
 
-" Indent Settings
-set autoindent
-set smartindent
+" Commands
+au BufWritePost .vimrc so $MYVIMRC          " Autoload .vimrc after saving
+au BufNewFile,BufRead *.m,*.h set ft=objc   " Set *.m & *.c files to ObjectiveC
+au FileType python setlocal ts=4 sw=4       " Set tabs for Python
+au FileType ruby setlocal ts=2 sw=2         " Set tabs for Ruby
 
-" Set List characters
-set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<
-
-" Always show status line
-set laststatus=2
-
-" Set Status Line format
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]
-                
-" Faster scrolling
-set scrolljump=2
-
-" File Type Settings
-autocmd FileType python setlocal ts=4 sw=4
-autocmd FileType ruby setlocal ts=2 sw=2
-autocmd BufNewFile,BufRead *.m,*.h set ft=objc
+" Plugins
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'ervandew/supertab'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/bufexplorer.zip'
+Plugin 'vim-scripts/SearchComplete'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+call vundle#end()
 
 " Plugin Settings
 let g:bufExplorerShowRelativePath=1
-let g:NERDShutUp = 1
-let g:NERDTreeHijackNetrw = 0
-let g:airline#extensions#tabline#enabled = 1
+let g:NERDShutUp=1
+let g:NERDTreeHijackNetrw=0
+let g:airline#extensions#tabline#enabled=1
 
 " Custom key bindings
 let mapleader = ","
@@ -83,21 +80,15 @@ map <Leader>s <C-Z>
 
 " GUI Settings
 if has('gui_running')
-  " Hide the toolbar
-  set guioptions-=T
+  set guioptions-=T        " Hide the toolbar
+  set lines=50 columns=100 " Set window height and width
+  colorscheme railscasts   " Use railscasts GUI theme
 
-  " Set window height and width
-  set lines=50 columns=100
-
-  " Set colorscheme
-  colorscheme railscasts
-
-  " Set font
   if has("win32") || has("win64")
-      set guifont=Consolas:h11:cANSI
+      set guifont=Consolas:h11:cANSI        " Set font for Windows
   elseif has("mac")
-      set guifont=Menlo\ Regular:h13.00
+      set guifont=Menlo\ Regular:h13.00     " Set font for Mac
   else
-      set guifont=Courier_New:h10:cDEFAULT
+      set guifont=Courier_New:h10:cDEFAULT  " Set font for everything else
   endif
 end
