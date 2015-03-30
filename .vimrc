@@ -1,10 +1,6 @@
 autocmd!
 set nocompatible  " Use Vim settings rather than Vi.
 
-" Setup pathogen
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-
 filetype on         " Detect file types
 filetype indent on  " Load file-specific indent files
 filetype plugin on  " Load file-specific plugin files
