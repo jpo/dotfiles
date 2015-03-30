@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = function (grunt) {
-  var HOME     = process.env.HOME;
+  var HOME     = process.env.HOME || process.env.USERPROFILE;
   var SYMLINKS = ['.bash_profile', '.gemrc', '.tmux.conf', '.vim', '.vimrc'];
 
   grunt.initConfig({
