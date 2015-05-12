@@ -36,7 +36,7 @@ set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<  " Chars to displ
 set laststatus=2  " Always show status line
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]  " Status line format
 
-set fileformats=unix,doc,mac  " Try to detect fileformats
+set fileformats=unix,dos,mac  " Try to detect fileformats
 
 " Commands
 au BufWritePost .vimrc so $MYVIMRC          " Autoload .vimrc after saving
