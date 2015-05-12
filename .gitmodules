@@ -1,0 +1,36 @@
+[submodule ".vim/bundle/vim-railscasts-theme"]
+	path = .vim/bundle/vim-railscasts-theme
+	url = https://github.com/jpo/vim-railscasts-theme.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/bundle/nercommenter"]
+	path = .vim/bundle/nercommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-rails"]
+	path = .vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/bundle/vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/bundle/bufexplorer"]
+	path = .vim/bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule ".vim/bundle/SearchComplete"]
+	path = .vim/bundle/SearchComplete
+	url = https://github.com/vim-scripts/SearchComplete.git
+[submodule ".vim/bundle/vim-coffee-script"]
+	path = .vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/vim-airline.git"]
+	path = .vim/bundle/vim-airline.git
+	url = https://github.com/bling/vim-airline.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule ".vim/bundle/ctrp.vim"]
+	path = .vim/bundle/ctrp.vim
+	url = https://github.com/kien/ctrlp.vim.git
