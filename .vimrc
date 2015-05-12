@@ -9,7 +9,7 @@ syntax on           " Enable syntax highlighting
 
 " Set colorscheme
 set background=dark
-colorscheme distinguished
+colorscheme railscasts
 
 set nobackup      " No backup files
 set noswapfile    " No swap files
@@ -59,7 +59,6 @@ map <Leader>s <C-Z>
 if has('gui_running')
   set guioptions-=T        " Hide the toolbar
   set lines=50 columns=100 " Set window height and width
-  colorscheme railscasts   " Use railscasts GUI theme
 
   if has("win32") || has("win64")
       set guifont=Consolas:h11:cANSI        " Set font for Windows
