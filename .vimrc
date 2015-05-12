@@ -59,12 +59,5 @@ map <Leader>s <C-Z>
 if has('gui_running')
   set guioptions-=T       " Hide the toolbar
   set lines=36 columns=80 " Set window height and width
-
-  if has("win32") || has("win64")
-      set guifont=Consolas:h11:cANSI        " Set font for Windows
-  elseif has("mac")
-      set guifont=Menlo\ Regular:h13.00     " Set font for Mac
-  else
-      set guifont=Courier_New:h10:cDEFAULT  " Set font for everything else
-  endif
+  set guifont=Consolas:h14,Monaco:h16,Inconsolata:h14
 end
