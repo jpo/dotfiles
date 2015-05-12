@@ -1,6 +1,9 @@
 autocmd!
 set nocompatible  " Use Vim settings rather than Vi.
 
+" Enable pathogen
+execute pathogen#infect()
+
 filetype on         " Detect file types
 filetype indent on  " Load file-specific indent files
 filetype plugin on  " Load file-specific plugin files
