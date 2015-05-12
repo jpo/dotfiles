@@ -41,25 +41,6 @@ au BufNewFile,BufRead *.m,*.h set ft=objc   " Set *.m & *.c files to ObjectiveC
 au FileType python setlocal ts=4 sw=4       " Set tabs for Python
 au FileType ruby setlocal ts=2 sw=2         " Set tabs for Ruby
 
-" Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'ervandew/supertab'
-Plugin 'jpo/vim-railscasts-theme'
-Plugin 'Lokaltog/vim-distinguished'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/bufexplorer.zip'
-Plugin 'vim-scripts/SearchComplete'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
-call vundle#end()
-
 " Plugin Settings
 let g:bufExplorerShowRelativePath=1
 let g:NERDShutUp=1
