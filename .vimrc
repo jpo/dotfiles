@@ -57,8 +57,8 @@ map <Leader>s <C-Z>
 
 " GUI Settings
 if has('gui_running')
-  set guioptions-=T        " Hide the toolbar
-  set lines=50 columns=100 " Set window height and width
+  set guioptions-=T       " Hide the toolbar
+  set lines=36 columns=80 " Set window height and width
 
   if has("win32") || has("win64")
       set guifont=Consolas:h11:cANSI        " Set font for Windows
