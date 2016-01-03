@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = function (grunt) {
   var HOME     = process.env.HOME || process.env.USERPROFILE;
-  var DOTFILES = ['.bash_profile', '.gemrc', '.tmux.conf', '.vim', '.vimrc'];
+  var DOTFILES = ['.bash_profile', '.gemrc', '.gitconfig', '.tmux.conf', '.vim', '.vimrc'];
 
   grunt.initConfig({
     // Remove DOTFILES from HOME
