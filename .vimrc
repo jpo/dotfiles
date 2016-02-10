@@ -28,7 +28,12 @@ set smartindent   " Indent on new line
 
 set expandtab     " Expand tabs to spaces
 set tabstop=2     " Use 2 spaces for tabs
+
 set shiftwidth=2  " Use 2 spaces for tabs
+
+" Fix delay caused by esckeys
+" Reference: https://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line#2158610
+set timeoutlen=100
 
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
 set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<  " Chars to display in list mode
