@@ -12,7 +12,7 @@ syntax on           " Enable syntax highlighting
 
 " Set colorscheme
 set background=dark
-colorscheme railscasts
+colorscheme distinguished
 
 set nobackup      " No backup files
 set noswapfile    " No swap files
