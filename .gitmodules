@@ -1,51 +1,48 @@
-[submodule ".vim/bundle/vim-railscasts-theme"]
-	path = .vim/bundle/vim-railscasts-theme
-	url = https://github.com/jpo/vim-railscasts-theme.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/nercommenter"]
-	path = .vim/bundle/nercommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-rails"]
-	path = .vim/bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/bundle/vim-ruby"]
-	path = .vim/bundle/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule ".vim/bundle/bufexplorer"]
-	path = .vim/bundle/bufexplorer
-	url = https://github.com/vim-scripts/bufexplorer.zip.git
-[submodule ".vim/bundle/SearchComplete"]
-	path = .vim/bundle/SearchComplete
-	url = https://github.com/vim-scripts/SearchComplete.git
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
-[submodule ".vim/bundle/ctrp.vim"]
-	path = .vim/bundle/ctrp.vim
-	url = https://github.com/kien/ctrlp.vim.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
-[submodule ".vim/bundle/surround"]
-	path = .vim/bundle/surround
-	url = https://github.com/tpope/vim-surround
-[submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
-[submodule ".vim/bundle/delimitMate"]
-	path = .vim/bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate
-[submodule ".vim/bundle/vim-distinguished"]
-	path = .vim/bundle/vim-distinguished
+[submodule ".vim/pack/jpo/start/vim-distinguished"]
+	path = .vim/pack/jpo/start/vim-distinguished
 	url = https://github.com/Lokaltog/vim-distinguished
+[submodule ".vim/pack/jpo/start/vim-railscasts-theme"]
+	path = .vim/pack/jpo/start/vim-railscasts-theme
+	url = https://github.com/jpo/vim-railscasts-theme.git
+[submodule ".vim/pack/jpo/start/supertab"]
+	path = .vim/pack/jpo/start/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/pack/jpo/start/nerdcommenter"]
+	path = .vim/pack/jpo/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/pack/jpo/start/nerdtree"]
+	path = .vim/pack/jpo/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/pack/jpo/start/vim-rails"]
+	path = .vim/pack/jpo/start/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/pack/jpo/start/vim-ruby"]
+	path = .vim/pack/jpo/start/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/pack/jpo/start/bufexplorer"]
+	path = .vim/pack/jpo/start/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule ".vim/pack/jpo/start/SearchComplete"]
+	path = .vim/pack/jpo/start/SearchComplete
+	url = https://github.com/vim-scripts/SearchComplete.git
+[submodule ".vim/pack/jpo/start/vim-airline"]
+	path = .vim/pack/jpo/start/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule ".vim/pack/jpo/start/ctrlp"]
+	path = .vim/pack/jpo/start/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/pack/jpo/start/vim-fugitive"]
+	path = .vim/pack/jpo/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/pack/jpo/start/syntastic"]
+	path = .vim/pack/jpo/start/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule ".vim/pack/jpo/start/vim-surround"]
+	path = .vim/pack/jpo/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/pack/jpo/start/vim-javascript"]
+	path = .vim/pack/jpo/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule ".vim/pack/jpo/start/delimitMate"]
+	path = .vim/pack/jpo/start/delimitMate
+	url = https://github.com/Raimondi/delimitMate
