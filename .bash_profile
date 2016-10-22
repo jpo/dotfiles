@@ -1,6 +1,9 @@
 # RBENV
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# PYENV
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 # PATH
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -18,5 +21,5 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-export NVM_DIR="/Users/joshorourke/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+  . "$(brew --prefix nvm)/nvm.sh"
