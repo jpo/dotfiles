@@ -1,13 +1,20 @@
-# RBENV
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Node Environemtn
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
-# PYENV
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# Python Environment
+PYENV_ROOT="~/.pyenv"
+CONDA_ROOT="~/anaconda3"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$CONDA_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Ruby Environment
+RBENV_ROOT="~/.rbenv"
+export PATH="$RBENV_ROOT/bin:$PATH"
+eval "$(rbenv init -)"
 
 # PATH
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
 # PROMPT
@@ -21,5 +28,3 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-export NVM_DIR="$HOME/.nvm"
-  . "$(brew --prefix nvm)/nvm.sh"
