@@ -80,6 +80,7 @@ au FileType ruby setlocal ts=2 sw=2         " Set tabs for Ruby
 let g:bufExplorerShowRelativePath=1
 let g:NERDShutUp=1
 let g:NERDTreeHijackNetrw=0
+let g:airline_theme='codedark'
 let g:airline#extensions#tabline#enabled=1
 
 " Custom key bindings
