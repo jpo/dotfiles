@@ -18,6 +18,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/bufexplorer.zip'
+Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-scripts/SearchComplete'
 Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim'
@@ -37,6 +38,8 @@ syntax on           " Enable syntax highlighting
 " Set colorscheme
 set background=dark
 colorscheme distinguished
+
+set encoding=utf-8
 
 set nobackup      " No backup files
 set noswapfile    " No swap files
