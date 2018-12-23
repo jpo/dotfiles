@@ -1,6 +1,33 @@
 autocmd!
 set nocompatible  " Use Vim settings rather than Vi.
 
+
+" Install vim-plug if not installed already
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+" Define Plugins
+call plug#begin("~/.vim/plugged")
+Plug 'Lokaltog/vim-distinguished'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/bufexplorer.zip'
+Plug 'vim-scripts/SearchComplete'
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'
+call plug#end()
+
+
+" Vim Configuration
 filetype on         " Detect file types
 filetype indent on  " Load file-specific indent files
 filetype plugin on  " Load file-specific plugin files
