@@ -12,7 +12,7 @@ endif
 
 " Define Plugins
 call plug#begin("~/.vim/plugged")
-Plug 'Lokaltog/vim-distinguished'
+Plug 'tomasiser/vim-code-dark'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -37,7 +37,7 @@ syntax on           " Enable syntax highlighting
 
 " Set colorscheme
 set background=dark
-colorscheme distinguished
+colorscheme codedark
 
 set encoding=utf-8
 
@@ -94,5 +94,5 @@ map <Leader>s <C-Z>
 if has('gui_running')
   set guioptions-=T       " Hide the toolbar
   set lines=36 columns=80 " Set window height and width
-  set guifont=Consolas:h14,Monaco:h16,Inconsolata:h14
+  set guifont=Consolas:h14,Monaco:h14,Inconsolata:h14
 end
