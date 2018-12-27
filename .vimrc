@@ -1,17 +1,22 @@
 autocmd!
 set nocompatible  " Use Vim settings rather than Vi.
 
+" Set environment variables
+if has('win32') || has('win64')
+  let $VIMHOME = $HOME.'/vimfiles'
+else
+  let $VIMHOME = $HOME.'/.vim'
+endif
 
 " Install vim-plug if not installed already
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob($VIMHOME.'/autoload/plug.vim'))
+  silent execute '!curl -fLo '.$VIMHOME.'/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
 " Define Plugins
-call plug#begin("~/.vim/plugged")
+call plug#begin($VIMHOME.'/plugged')
 Plug 'tomasiser/vim-code-dark'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
@@ -95,5 +100,5 @@ map <Leader>s <C-Z>
 if has('gui_running')
   set guioptions-=T       " Hide the toolbar
   set lines=36 columns=80 " Set window height and width
-  set guifont=Consolas:h14,Monaco:h14,Inconsolata:h14
+  set guifont=Consolas:h11,Monaco:h14,Inconsolata:h14
 end
