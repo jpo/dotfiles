@@ -38,9 +38,9 @@ if type brew 2&>/dev/null; then
   source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
 
   GIT_PS1_SHOWDIRTYSTATE=true
-  export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]$(__git_ps1)\$ '
+  export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]$(__git_ps1)\$ '
 else
-  export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]\$ '
+  export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\$ '
   echo "run: brew install bash-completion"
 fi
 
