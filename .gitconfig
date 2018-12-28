@@ -2,7 +2,7 @@
 	name = Josh O'Rourke
 	email = joshorourke@me.com
 [diff]
-	tool = vimdiff
+	tool = vscode
 [difftool]
 	prompt = false
 [alias]
@@ -17,3 +17,9 @@
 	required = true
 [color]
 	ui = auto
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = "code --wait $MERGED"
+[difftool "vscode"]
+	cmd = "code --wait --diff $LOCAL $REMOTE"
