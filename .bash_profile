@@ -29,14 +29,19 @@ fi
 export PATH="/usr/local/bin:$PATH"
 
 # PROMPT
-export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]$ '
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\[\033[0;32m\]\h \[\033[0;33m\]\W\[\033[00m\]\[\033[01;00m\]$(__git_ps1)\$ '
 
 # ALIASES
 alias tmux='TERM=screen-256color-bce tmux'
 
 # BASH COMPLETION
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if type brew 2&>/dev/null; then
+  source "$(brew --prefix)/etc/bash_completion"
+  source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+  source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
+else
+  echo "run: brew install bash-completion"
 fi
 
 # added by Anaconda3 5.3.1 installer
