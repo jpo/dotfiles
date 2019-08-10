@@ -5,12 +5,10 @@
 	tool = vscode
 [difftool]
 	prompt = false
-[alias]
-	d = difftool
 [push]
 	default = simple
 [core]
-	editor = /usr/bin/vim
+	editor = vim
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
