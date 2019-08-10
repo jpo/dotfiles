@@ -30,6 +30,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
+Plug 'ambv/black'
 call plug#end()
 
 
