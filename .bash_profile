@@ -28,7 +28,7 @@ fi
 # Update PATH
 export PATH="$PATH:/Users/josh/.local/bin"
 export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Use MacVim
 alias vim='mvim -v'
