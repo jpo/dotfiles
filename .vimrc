@@ -18,10 +18,8 @@ endif
 " Define Plugins
 call plug#begin($VIMHOME.'/plugged')
 Plug 'tomasiser/vim-code-dark'
-Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-scripts/SearchComplete'
@@ -30,7 +28,9 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
-Plug 'ambv/black'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mileszs/ack.vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 
@@ -51,6 +51,8 @@ set nobackup      " No backup files
 set noswapfile    " No swap files
 set nowrap        " No line wrapping
 
+set belloff=all   " Disable audible and visual bells
+
 set number        " Show lines numbers
 
 set hlsearch      " Highlight search results
@@ -61,7 +63,6 @@ set smartindent   " Indent on new line
 
 set expandtab     " Expand tabs to spaces
 set tabstop=2     " Use 2 spaces for tabs
-
 set shiftwidth=2  " Use 2 spaces for tabs
 
 set splitbelow    " Split buffers below current
@@ -94,15 +95,35 @@ let g:airline#extensions#tabline#enabled=1
 
 " Custom key bindings
 let mapleader = ","
+map <Leader>a :Ack!<Space>
 map <Leader>b :BufExplorer<CR>
 map <Leader>e :Ex<CR>
 map <Leader>f :CtrlP<CR>
 map <Leader>n :NERDTree<CR>
 map <Leader>s <C-Z>
+map <C-_> <plug>NERDCommenterToggle
+vmap <C-_> <plug>NERDCommenterToggle<CR>gv
+
+" Map Control-Backspace to delete the previous work in insert mode
+inoremap <C-BS> <C-w>
+
+ "Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " GUI Settings
 if has('gui_running')
   set guioptions-=T       " Hide the toolbar
-  set lines=36 columns=80 " Set window height and width
   set guifont=Consolas:h11,Monaco:h14,Inconsolata:h14
 end
+
