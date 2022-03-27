@@ -9,6 +9,7 @@
 	default = simple
 [core]
 	editor = vim
+	ignorecase = false
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
@@ -23,3 +24,5 @@
 	cmd = "code --wait --diff $LOCAL $REMOTE"
 [alias]
 	clean-branches = !git branch | grep -v master | xargs git branch -D
+[pull]
+	rebase = false
