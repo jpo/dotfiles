@@ -17,20 +17,13 @@ endif
 
 " Define Plugins
 call plug#begin($VIMHOME.'/plugged')
-Plug 'tomasiser/vim-code-dark'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-scripts/bufexplorer.zip'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'vim-scripts/SearchComplete'
-Plug 'bling/vim-airline'
-Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'Raimondi/delimitMate'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mileszs/ack.vim'
-Plug 'w0rp/ale'
+Plug 'tomasiser/vim-code-dark'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -74,9 +67,6 @@ set timeoutlen=500
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
 set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<  " Chars to display in list mode
 
-set laststatus=2  " Always show status line
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%c,%l]  " Status line format
-
 set fileformats=unix,dos,mac  " Try to detect fileformats
 
 " Commands
@@ -90,36 +80,19 @@ let g:bufExplorerShowRelativePath=1
 let g:NERDShutUp=1
 let g:NERDTreeHijackNetrw=0
 let g:NERDTreeNodeDelimiter="\u00a0"
-let g:airline_theme='codedark'
+let g:airline_theme='dark'
 let g:airline#extensions#tabline#enabled=1
 
 " Custom key bindings
 let mapleader = ","
-map <Leader>a :Ack!<Space>
 map <Leader>b :BufExplorer<CR>
 map <Leader>e :Ex<CR>
-map <Leader>f :CtrlP<CR>
 map <Leader>n :NERDTree<CR>
-map <Leader>s <C-Z>
 map <C-_> <plug>NERDCommenterToggle
 vmap <C-_> <plug>NERDCommenterToggle<CR>gv
 
 " Map Control-Backspace to delete the previous work in insert mode
 inoremap <C-BS> <C-w>
-
- "Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 
 " GUI Settings
 if has('gui_running')
