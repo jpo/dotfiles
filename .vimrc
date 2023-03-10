@@ -60,6 +60,8 @@ set shiftwidth=2  " Use 2 spaces for tabs
 
 set splitbelow    " Split buffers below current
 
+set clipboard=unnamed " Use clipboard on MacOS
+
 " Fix delay caused by esckeys
 " Reference: https://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line#2158610
 set timeoutlen=500
@@ -82,6 +84,7 @@ let g:NERDTreeHijackNetrw=0
 let g:NERDTreeNodeDelimiter="\u00a0"
 let g:airline_theme='dark'
 let g:airline#extensions#tabline#enabled=1
+let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git'
 
 " Custom key bindings
 let mapleader = ","
